@@ -40,7 +40,6 @@ body {
    border: 12px solid #5c5c5c;
    border-radius: 50%;
    margin: 8% auto 0;
-   box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2);
 }
 
 span {
@@ -197,6 +196,19 @@ span {
   
 }
 </style>
+<div>
+    <style id="dialCSS">
+    .dial {
+   position: relative;
+   width: 350px;
+   height: 350px;
+   background: #ececec;
+   border: 12px solid #5c5c5c;
+   border-radius: 50%;
+   margin: 8% auto 0;
+}
+    </style>
+  </div>
 <script>
 var dialLines = document.getElementsByClassName('diallines');
 for (var i = 1; i < 60; i++) {
@@ -214,9 +226,9 @@ function tick() {
    var month = date.getMonth();
    var year = date.getFullYear();
    
-   if (hours > 11){
-     var backgroundcolor = 'black';
-     var backgroundcolor2 = 'black';
+   if (hours > 9){
+     var backgroundcolor = 'Grey';
+     var backgroundcolor2 = 'Darkgrey';
 
      var accentColor = 'black';
 
@@ -232,6 +244,8 @@ function tick() {
    x.style.color = accentColor;
    x = document.getElementById('dial');
    x.style.background = backgroundcolor2;
+     var dial = document.getElementById('dialCSS');
+   dial.innerHTML = '.dial {' + 'box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2); '+' }';
    x.style.border = '0px solid black';
      
    
@@ -251,6 +265,332 @@ function tick() {
      document.getElementsByClassName('diallines')[seconds].style.background = 'orange';
         document.getElementById("sec-hand").style.width = "14px";
    document.getElementById("sec-hand").style.height = "162px";
+   }
+   if (hours > 10){
+     var backgroundcolor = 'grey';
+     var backgroundcolor2 = 'grey';
+
+     var accentColor = 'black';
+
+
+   document.body.style.background = backgroundcolor;
+   var x = document.getElementById('twelve');
+   x.style.color = accentColor;
+   x = document.getElementById('three');
+   x.style.color = accentColor;
+   x = document.getElementById('six');
+   x.style.color = accentColor;
+   x = document.getElementById('nine');
+   x.style.color = accentColor;
+   x = document.getElementById('dial');
+   x.style.background = backgroundcolor2;
+     var dial = document.getElementById('dialCSS');
+   dial.innerHTML = '.dial {' + 'box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2); '+' }';
+   x.style.border = '12px solid white';
+     
+   
+     
+   x = document.getElementById('diallines');
+   for (var i = 0; document.getElementsByClassName('diallines').length > i; i++){
+   document.getElementsByClassName('diallines')[i].style.background = 'white';
+   }
+   x = document.getElementById('date');
+   x.style.color = 'orange';
+
+   document.getElementById("twelve").innerHTML = "12";
+   document.getElementById("three").innerHTML = "3";
+   document.getElementById("six").innerHTML = "6";
+   document.getElementById("nine").innerHTML = "9";
+   $('.date').css('color', 'white');
+     document.getElementsByClassName('diallines')[seconds].style.background = 'orange';
+        document.getElementById("sec-hand").style.width = "14px";
+   document.getElementById("sec-hand").style.height = "162px";
+   }
+   if (hours > 11){
+     var backgroundcolor = 'lightblue';
+     var backgroundcolor2 = 'grey';
+
+     var accentColor = 'white';
+
+
+   document.body.style.background = backgroundcolor;
+   var x = document.getElementById('twelve');
+   x.style.color = accentColor;
+   x = document.getElementById('three');
+   x.style.color = accentColor;
+   x = document.getElementById('six');
+   x.style.color = accentColor;
+   x = document.getElementById('nine');
+   x.style.color = accentColor;
+   x = document.getElementById('dial');
+   x.style.background = backgroundcolor2;
+     var dial = document.getElementById('dialCSS');
+   dial.innerHTML = '.dial {' + 'box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2); '+' }';
+   x.style.border = '12px solid darkgrey';
+     
+   
+     
+   x = document.getElementById('diallines');
+   for (var i = 0; document.getElementsByClassName('diallines').length > i; i++){
+   document.getElementsByClassName('diallines')[i].style.background = 'white';
+   }
+   x = document.getElementById('date');
+   x.style.color = 'orange';
+
+   document.getElementById("twelve").innerHTML = "12";
+   document.getElementById("three").innerHTML = "3";
+   document.getElementById("six").innerHTML = "6";
+   document.getElementById("nine").innerHTML = "9";
+   $('.date').css('color', 'white');
+     document.getElementsByClassName('diallines')[seconds].style.background = 'orange';
+        document.getElementById("sec-hand").style.width = "14px";
+   document.getElementById("sec-hand").style.height = "162px";
+   }
+   if (hours > 12){
+     var backgroundcolor = 'grey';
+     var backgroundcolor2 = 'white';
+     var accentColor = 'black';
+
+   document.body.style.background = backgroundcolor;
+   var x = document.getElementById('twelve');
+   x.style.color = accentColor;
+   x = document.getElementById('three');
+   x.style.color = accentColor;
+   x = document.getElementById('six');
+   x.style.color = accentColor;
+   x = document.getElementById('nine');
+   x.style.color = accentColor;
+   x = document.getElementById('dial');
+   x.style.background = backgroundcolor2;
+     var dial = document.getElementById('dialCSS');
+   dial.innerHTML = '.dial {' + 'box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2); '+' }';
+   x.style.border = '0px solid black';
+ 
+   x = document.getElementById('diallines');
+   for (var i = 0; document.getElementsByClassName('diallines').length > i; i++){
+   document.getElementsByClassName('diallines')[i].style.background = 'grey';
+   }
+   x = document.getElementById('date');
+   x.style.color = 'orange';
+
+   document.getElementById("twelve").innerHTML = "12";
+   document.getElementById("three").innerHTML = "3";
+   document.getElementById("six").innerHTML = "6";
+   document.getElementById("nine").innerHTML = "9";
+   $('.date').css('color', 'white');
+   document.getElementsByClassName('diallines')[seconds].style.background = 'orange';
+   document.getElementById("sec-hand").style.width = "14px";
+   document.getElementById("sec-hand").style.height = "162px";
+     
+   $('.date').css('color', 'black');
+   var z = document.getElementById("date");
+   z.style.color ="black";
+   z.font = "Arial";
+   }
+   if (hours > 13){
+     var backgroundcolor = 'grey';
+     var backgroundcolor2 = 'darkgrey';
+     var accentColor = 'white';
+
+   document.body.style.background = backgroundcolor;
+   var x = document.getElementById('twelve');
+   x.style.color = accentColor;
+   x = document.getElementById('three');
+   x.style.color = accentColor;
+   x = document.getElementById('six');
+   x.style.color = accentColor;
+   x = document.getElementById('nine');
+   x.style.color = accentColor;
+   x = document.getElementById('dial');
+   x.style.background = backgroundcolor2;
+     var dial = document.getElementById('dialCSS');
+   dial.innerHTML = '.dial {' + 'box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2); '+' }';
+   x.style.border = '12px solid white';
+ 
+   x = document.getElementById('diallines');
+   for (var i = 0; document.getElementsByClassName('diallines').length > i; i++){
+   document.getElementsByClassName('diallines')[i].style.background = 'white';
+   }
+   x = document.getElementById('date');
+   x.style.color = 'orange';
+
+   document.getElementById("twelve").innerHTML = "12";
+   document.getElementById("three").innerHTML = "3";
+   document.getElementById("six").innerHTML = "6";
+   document.getElementById("nine").innerHTML = "9";
+   $('.date').css('color', 'white');
+   document.getElementsByClassName('diallines')[seconds].style.background = 'orange';
+   document.getElementById("sec-hand").style.width = "14px";
+   document.getElementById("sec-hand").style.height = "162px";
+     
+   $('.date').css('color', 'black');
+   var z = document.getElementById("date");
+   z.style.color ="white";
+   z.font = "Arial";
+   }
+   if (hours > 14){
+     var backgroundcolor = 'darkgrey';
+     var backgroundcolor2 = 'darkblue';
+     var accentColor = 'white';
+
+   document.body.style.background = backgroundcolor;
+   var x = document.getElementById('twelve');
+   x.style.color = accentColor;
+   x = document.getElementById('three');
+   x.style.color = accentColor;
+   x = document.getElementById('six');
+   x.style.color = accentColor;
+   x = document.getElementById('nine');
+   x.style.color = accentColor;
+   x = document.getElementById('dial');
+   x.style.background = backgroundcolor2;
+    var dial = document.getElementById('dialCSS');
+   dial.innerHTML = '.dial {' + 'box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2); '+' }';
+   x.style.border = '12px solid white';
+ 
+   x = document.getElementById('diallines');
+   for (var i = 0; document.getElementsByClassName('diallines').length > i; i++){
+   document.getElementsByClassName('diallines')[i].style.background = 'white';
+   }
+   x = document.getElementById('date');
+   x.style.color = 'orange';
+
+   document.getElementById("twelve").innerHTML = "12";
+   document.getElementById("three").innerHTML = "3";
+   document.getElementById("six").innerHTML = "6";
+   document.getElementById("nine").innerHTML = "9";
+   $('.date').css('color', 'white');
+   document.getElementsByClassName('diallines')[seconds].style.background = 'orange';
+   document.getElementById("sec-hand").style.width = "14px";
+   document.getElementById("sec-hand").style.height = "162px";
+     
+   $('.date').css('color', 'black');
+   var z = document.getElementById("date");
+   z.style.color ="white";
+   z.font = "Arial";
+   }
+   if (hours > 15){
+     var backgroundcolor = 'darkblue';
+     var backgroundcolor2 = 'darkblue';
+     var accentColor = 'white';
+
+   document.body.style.background = backgroundcolor;
+   var x = document.getElementById('twelve');
+   x.style.color = accentColor;
+   x = document.getElementById('three');
+   x.style.color = accentColor;
+   x = document.getElementById('six');
+   x.style.color = accentColor;
+   x = document.getElementById('nine');
+   x.style.color = accentColor;
+   x = document.getElementById('dial');
+   x.style.background = backgroundcolor2;
+     var dial = document.getElementById('dialCSS');
+   dial.innerHTML = '.dial {' + 'box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2); '+' }';
+   x.style.border = '6px solid white';
+ 
+   x = document.getElementById('diallines');
+   for (var i = 0; document.getElementsByClassName('diallines').length > i; i++){
+   document.getElementsByClassName('diallines')[i].style.background = 'darkblue';
+   }
+   x = document.getElementById('date');
+   x.style.color = 'orange';
+
+   document.getElementById("twelve").innerHTML = "12";
+   document.getElementById("three").innerHTML = "3";
+   document.getElementById("six").innerHTML = "6";
+   document.getElementById("nine").innerHTML = "9";
+   $('.date').css('color', 'white');
+   document.getElementsByClassName('diallines')[seconds].style.background = 'orange';
+   document.getElementById("sec-hand").style.width = "14px";
+   document.getElementById("sec-hand").style.height = "162px";
+     
+   $('.date').css('color', 'black');
+   var z = document.getElementById("date");
+   z.style.color ="white";
+   z.font = "Arial";
+   }
+   if (hours > 16){
+     var backgroundcolor = 'darkred';
+     var backgroundcolor2 = 'darkred';
+     var accentColor = 'white';
+
+   document.body.style.background = backgroundcolor;
+   var x = document.getElementById('twelve');
+   x.style.color = accentColor;
+   x = document.getElementById('three');
+   x.style.color = accentColor;
+   x = document.getElementById('six');
+   x.style.color = accentColor;
+   x = document.getElementById('nine');
+   x.style.color = accentColor;
+   x = document.getElementById('dial');
+   x.style.background = backgroundcolor2;
+     var dial = document.getElementById('dialCSS');
+   dial.innerHTML = '.dial {' + 'box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2); '+' }';
+   x.style.border = '12px solid white';
+ 
+   x = document.getElementById('diallines');
+   for (var i = 0; document.getElementsByClassName('diallines').length > i; i++){
+   document.getElementsByClassName('diallines')[i].style.background = 'white';
+   }
+   x = document.getElementById('date');
+   x.style.color = 'orange';
+
+   document.getElementById("twelve").innerHTML = "12";
+   document.getElementById("three").innerHTML = "3";
+   document.getElementById("six").innerHTML = "6";
+   document.getElementById("nine").innerHTML = "9";
+   $('.date').css('color', 'white');
+   document.getElementsByClassName('diallines')[seconds].style.background = 'orange';
+   document.getElementById("sec-hand").style.width = "14px";
+   document.getElementById("sec-hand").style.height = "162px";
+     
+   $('.date').css('color', 'black');
+   var z = document.getElementById("date");
+   z.style.color ="white";
+   z.font = "Arial";
+   }
+   if (hours > 17){
+     var backgroundcolor = 'purple';
+     var backgroundcolor2 = 'purple';
+     var accentColor = 'white';
+
+   document.body.style.background = backgroundcolor;
+   var x = document.getElementById('twelve');
+   x.style.color = accentColor;
+   x = document.getElementById('three');
+   x.style.color = accentColor;
+   x = document.getElementById('six');
+   x.style.color = accentColor;
+   x = document.getElementById('nine');
+   x.style.color = accentColor;
+   x = document.getElementById('dial');
+   x.style.background = backgroundcolor2;
+   x.style.border = '0px solid white';
+   var dial = document.getElementById('dialCSS');
+   dial.innerHTML = '.dial {' + 'box-shadow: 1px 14px 21px 0 rgba(0,0,0,.0); '+' }';
+ 
+   x = document.getElementById('diallines');
+   for (var i = 0; document.getElementsByClassName('diallines').length > i; i++){
+   document.getElementsByClassName('diallines')[i].style.background = 'purple';
+   }
+   x = document.getElementById('date');
+   x.style.color = 'white';
+
+   document.getElementById("twelve").innerHTML = "12";
+   document.getElementById("three").innerHTML = "3";
+   document.getElementById("six").innerHTML = "6";
+   document.getElementById("nine").innerHTML = "9";
+   $('.date').css('color', 'white');
+   document.getElementsByClassName('diallines')[seconds].style.background = 'orange';
+   document.getElementById("sec-hand").style.width = "14px";
+   document.getElementById("sec-hand").style.height = "162px";
+     
+   $('.date').css('color', 'black');
+   var z = document.getElementById("date");
+   z.style.color ="white";
+   z.font = "Arial";
    }
    if (hours < 11){
      var backgroundcolor = '#ececec';
@@ -273,7 +613,7 @@ function tick() {
    for (var i = 0; document.getElementsByClassName('diallines').length > i; i++){
    document.getElementsByClassName('diallines')[i].style.background = accentColor;
 
-   $('.date').css('color', 'grey');
+   
    }
 
    document.getElementById("twelve").innerHTML = "12";
@@ -317,7 +657,7 @@ function tick() {
    $('.date').text(hours +":"+ minutes +":"+ SecondsA+" - "+(month+1)+" / "+ day +" / "+ year);
 
    var z = document.getElementById("time");
-   z.style.color ="white";
+   // z.style.color ="white";
    z.font = "Arial";
 
 }
